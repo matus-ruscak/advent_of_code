@@ -41,3 +41,17 @@ pub fn read_into_vec_int_as_lines(file_path: &str) -> Vec<Vec<i32>> {
     }
         result
 }
+
+pub fn read_into_vec_of_strings(file_path: &str) -> Vec<String> {
+    let file = File::open(file_path).unwrap();
+    let reader = BufReader::new(file);
+
+    let mut result: Vec<String> = vec![];
+
+    for line in reader.lines() {
+        let line_content = line.unwrap();
+        result.push(line_content);
+    }
+
+    result
+}
