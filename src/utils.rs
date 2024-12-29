@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufReader, BufRead};
 
@@ -54,4 +55,19 @@ pub fn read_into_vec_of_strings(file_path: &str) -> Vec<String> {
     }
 
     result
+}
+
+pub fn generate_grid(input_string: Vec<String>) -> HashMap<(i32, i32), char> {
+    let y_max = input_string.len();
+    let mut grid: HashMap<(i32, i32), char> = HashMap::new();
+
+    // first digit is the y-axis, second is the x-axis
+    for i in 0..y_max {
+        let mut x_position: i32 = 0;
+        for j in input_string[i].chars() {
+            grid.insert((i as i32, x_position), j);
+            x_position += 1;
+        }
+    }
+    grid
 }
