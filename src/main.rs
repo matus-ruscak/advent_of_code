@@ -31,8 +31,12 @@ fn main() {
 
     // assert_eq!(3749, advent_of_code::day_7::run_a("csv/day_7_test.txt"));
     // advent_of_code::day_7::run_a("csv/day_7_actual.txt");
+    // assert_eq!(11387, advent_of_code::day_7::run_b("csv/day_7_test.txt"));
+    // advent_of_code::day_7::run_b("csv/day_7_actual.txt");
 
-    assert_eq!(11387, advent_of_code::day_7::run_b("csv/day_7_test.txt"));
-    advent_of_code::day_7::run_b("csv/day_7_actual.txt");
+    // assert_eq!(14, advent_of_code::day_8::run_a("csv/day_8_test.txt"));
+    // advent_of_code::day_8::run_a("csv/day_8_actual.txt");
 
+    assert_eq!(34, advent_of_code::day_8::run_b("csv/day_8_test.txt"));
+    advent_of_code::day_8::run_b("csv/day_8_actual.txt");
 }
