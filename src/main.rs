@@ -39,6 +39,10 @@ fn main() {
     // assert_eq!(34, advent_of_code::day_8::run_b("csv/day_8_test.txt"));
     // advent_of_code::day_8::run_b("csv/day_8_actual.txt");
 
+    // NOT MINE - Solution taken from BurgundyDev
+    // https://github.com/BurgundyDev/advent-of-code-2024-rust/blob/main/src/bin/09.rs
     assert_eq!(1928, advent_of_code::day_9::run_a("csv/day_9_test.txt"));
     advent_of_code::day_9::run_a("csv/day_9_actual.txt");
+    assert_eq!(2858, advent_of_code::day_9::run_b("csv/day_9_test.txt"));
+    advent_of_code::day_9::run_b("csv/day_9_actual.txt");
 }
