@@ -71,3 +71,18 @@ pub fn generate_grid(input_string: Vec<String>) -> HashMap<(i32, i32), char> {
     }
     grid
 }
+
+pub fn generate_grid_digits(input_string: Vec<String>) -> HashMap<(i32, i32), i32> {
+    let y_max = input_string.len();
+    let mut grid: HashMap<(i32, i32), i32> = HashMap::new();
+
+    // first digit is the y-axis, second is the x-axis
+    for i in 0..y_max {
+        let mut x_position: i32 = 0;
+        for j in input_string[i].chars() {
+            grid.insert((i as i32, x_position), j.to_digit(10).unwrap() as i32);
+            x_position += 1;
+        }
+    }
+    grid
+}

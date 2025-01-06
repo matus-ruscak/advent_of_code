@@ -41,8 +41,14 @@ fn main() {
 
     // NOT MINE - Solution taken from BurgundyDev
     // https://github.com/BurgundyDev/advent-of-code-2024-rust/blob/main/src/bin/09.rs
-    assert_eq!(1928, advent_of_code::day_9::run_a("csv/day_9_test.txt"));
-    advent_of_code::day_9::run_a("csv/day_9_actual.txt");
-    assert_eq!(2858, advent_of_code::day_9::run_b("csv/day_9_test.txt"));
-    advent_of_code::day_9::run_b("csv/day_9_actual.txt");
+    // assert_eq!(1928, advent_of_code::day_9::run_a("csv/day_9_test.txt"));
+    // advent_of_code::day_9::run_a("csv/day_9_actual.txt");
+    // assert_eq!(2858, advent_of_code::day_9::run_b("csv/day_9_test.txt"));
+    // advent_of_code::day_9::run_b("csv/day_9_actual.txt");
+
+    assert_eq!(36, advent_of_code::day_10::run("csv/day_10_test.txt", "part_1"));
+    advent_of_code::day_10::run("csv/day_10_actual.txt", "part_1");
+    assert_eq!(81, advent_of_code::day_10::run("csv/day_10_test.txt", "part_2"));
+    advent_of_code::day_10::run("csv/day_10_actual.txt", "part_2");
+
 }
