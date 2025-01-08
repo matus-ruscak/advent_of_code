@@ -142,3 +142,19 @@ pub fn run_b(file_path: &str) -> u64 {
     println!("Final result is {result}");
     result
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_9_test.txt");
+        assert_eq!(1928, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_9_test.txt");
+        assert_eq!(2858, result);
+    }
+}

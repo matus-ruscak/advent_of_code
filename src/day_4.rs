@@ -111,3 +111,20 @@ pub fn run_b(file_path: &str) -> i32 {
     println!("Final result is {final_result}");
     final_result
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_4_test.txt");
+        assert_eq!(18, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_4_test.txt");
+        assert_eq!(9, result);
+    }
+}

@@ -70,3 +70,19 @@ fn find_paths(
 
     count
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run("csv/day_10_test.txt", "part_1");
+        assert_eq!(36, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run("csv/day_10_test.txt", "part_2");
+        assert_eq!(81, result);
+    }
+}

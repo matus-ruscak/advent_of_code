@@ -108,3 +108,20 @@ fn page_order_check(page: &Vec<i32>, rules: &Vec<(i32, i32)>) -> bool {
     }
     is_correct_order
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_5_test.txt");
+        assert_eq!(143, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_5_test.txt");
+        assert_eq!(123, result);
+    }
+}

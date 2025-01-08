@@ -75,3 +75,20 @@ fn evaluate_combinations(
     }
     None
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_7_test.txt");
+        assert_eq!(3749, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_7_test.txt");
+        assert_eq!(11387, result);
+    }
+}

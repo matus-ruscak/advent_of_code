@@ -146,3 +146,20 @@ fn extend_step(
 fn is_within_bounds(location: (i32, i32), x_max: i32, y_max: i32) -> bool {
     location.0 >= 0 && location.0 < y_max && location.1 >= 0 && location.1 < x_max
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_8_test.txt");
+        assert_eq!(14, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_8_test.txt");
+        assert_eq!(34, result);
+    }
+}

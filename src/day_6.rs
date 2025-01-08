@@ -123,3 +123,20 @@ fn initialize_vector_rotation_map() -> HashMap<(i32, i32), (i32, i32)> {
 
     vector_rotate_map
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_6_test.txt");
+        assert_eq!(41, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_6_test.txt");
+        assert_eq!(6, result);
+    }
+}

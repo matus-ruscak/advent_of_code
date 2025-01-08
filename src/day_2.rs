@@ -85,3 +85,20 @@ fn gracious_increase(report: Vec<i32>, mut safe_report_count: i32) -> i32 {
     }
     safe_report_count
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_2_test.txt");
+        assert_eq!(2, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_2_test.txt");
+        assert_eq!(4, result);
+    }
+}

@@ -77,3 +77,19 @@ fn get_tuple_of_ints(input: &str) -> Vec<(i32, i32)> {
         })
         .collect()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_a() {
+        let result = run_a("csv/day_3_test.txt");
+        assert_eq!(161, result);
+    }
+    #[test]
+    fn test_b() {
+        let result = run_b("csv/day_3_test_b.txt");
+        assert_eq!(48, result);
+    }
+}
